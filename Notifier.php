@@ -24,4 +24,3 @@ class Notifier extends \Notifier\Notifier
         );
     }
 }
- 
