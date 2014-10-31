@@ -1,0 +1,8 @@
+parameters:
+  notifier.class: Notifier\NotifierBundle\Notifier
+
+services:
+  notifier:
+    class: "%notifier.class%"
+    arguments:
+      - "@service_container"
