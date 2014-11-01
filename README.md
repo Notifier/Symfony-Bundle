@@ -30,11 +30,11 @@ Installing this bundle can be done through these simple steps:
   // app/AppKernel.php
   public function registerBundles()
   {
-  	// ...
-  	$bundle = array(
-  		// ...
+      // ...
+      $bundle = array(
+          // ...
           new Notifier\NotifierBundle\NotifierNotifierBundle(),
-	  );
+      );
       // ...
   
       return $bundles;
@@ -50,14 +50,14 @@ Implement `\Notifier\Recipient\RecipientBLL` and register it as a service named 
 
 **Configure the types**
 
-```config.yml```
+`config.yml`
 
-   ```
-   notifier:
-       types:
-           alert:
-               channels: [ "acme.mail_channel" ]
-   ```
+```
+notifier:
+    types:
+        alert:
+            channels: [ "acme.mail_channel" ]
+```
 
 Make sure the channels all resolve to an existing service defined in the project.
 
