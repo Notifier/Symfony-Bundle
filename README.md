@@ -41,6 +41,39 @@ Installing this bundle can be done through these simple steps:
   }
   ```
 
+Usage
+-----
+
+**Implement the data provider**
+
+Implement `\Notifier\Recipient\RecipientBLL` and register it as a service named `notifier.recipient_bll`.
+
+**Configure the types**
+
+```config.yml```
+
+   ```
+   notifier:
+       types:
+           alert:
+               channels: [ "acme.mail_channel" ]
+   ```
+
+Make sure the channels all resolve to an existing service defined in the project.
+
+**Send a message**
+
+```
+use Notifier\Message\Message;
+use Notifier\Recipient\Recipient;
+use Notifier\NotifierBundle\Type\Type;
+
+// ...
+
+$message = new Message(new Type('alert'));
+$this->get('notifier')->sendMessage($message, array(new Recipient('identifier')));
+```
+
 Contributing
 ------------
 

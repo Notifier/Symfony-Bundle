@@ -1,8 +1,15 @@
 parameters:
   notifier.class: Notifier\NotifierBundle\Notifier
+  notifier.type_bll.class: Notifier\NotifierBundle\Type\TypeBLL
 
 services:
   notifier:
     class: "%notifier.class%"
+    arguments:
+      - "@notifier.recipient_bll"
+      - "@notifier.type_bll"
+
+  notifier.type_bll:
+    class: "%notifier.type_bll.class%"
     arguments:
       - "@service_container"

@@ -6,7 +6,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Notifier\NotifierBundle\DependencyInjection\Compiler;
 
-class NotifierNotifierBundle extends Bundle
+class NotifierBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

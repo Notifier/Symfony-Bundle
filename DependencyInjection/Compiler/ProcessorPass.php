@@ -8,6 +8,7 @@
  */
 
 namespace Notifier\NotifierBundle\DependencyInjection\Compiler;
+
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
@@ -22,6 +23,7 @@ class ProcessorPass implements CompilerPassInterface
         if (!$container->hasDefinition('notifier')) {
             return;
         }
+
         $notifier = $container->getDefinition('notifier');
         foreach ($container->findTaggedServiceIds('notifier.processor') as $id => $attr) {
             $notifier->addMethodCall('addProcessor', array(new Reference($id)));
