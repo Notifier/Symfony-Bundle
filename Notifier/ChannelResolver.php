@@ -46,14 +46,13 @@ class ChannelResolver implements ChannelResolverInterface
     }
 
     /**
-     * @param TypeInterface $type
-     * @param ChannelStore $channelStore
+     * @param  TypeInterface      $type
+     * @param  ChannelStore       $channelStore
      * @return ChannelInterface[]
      */
     public function getChannels(TypeInterface $type, ChannelStore $channelStore)
     {
-        if ($type instanceof Type && isset($this->rules[$type->getName()]))
-        {
+        if ($type instanceof Type && isset($this->rules[$type->getName()])) {
             return $this->rules[$type->getName()];
         }
 
@@ -71,4 +70,3 @@ class ChannelResolver implements ChannelResolverInterface
         return $this->recipientChannelResolver->filterChannels($recipient, $type, $channels);
     }
 }
- 

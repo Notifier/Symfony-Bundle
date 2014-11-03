@@ -10,8 +10,6 @@
 namespace Notifier\NotifierBundle\Notifier;
 
 use Notifier\Channel\ChannelInterface;
-use Notifier\Channel\ChannelResolverInterface;
-use Notifier\Channel\ChannelStore;
 use Notifier\NotifierBundle\Type\Type;
 use Notifier\Recipient\RecipientInterface;
 use Notifier\Type\TypeInterface;
@@ -29,4 +27,3 @@ interface RecipientChannelResolverInterface
      */
     public function filterChannels(RecipientInterface $recipient, TypeInterface $type, array $channels);
 }
- 

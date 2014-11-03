@@ -2,7 +2,6 @@
 
 namespace Notifier\NotifierBundle\DependencyInjection;
 
-use Notifier\NotifierBundle\DependencyInjection\Compiler\ChannelResolverPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Reference;
