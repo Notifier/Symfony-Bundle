@@ -1,15 +1,13 @@
 parameters:
-  notifier.class: Notifier\NotifierBundle\Notifier
-  notifier.type_bll.class: Notifier\NotifierBundle\Type\TypeBLL
+  notifier.class: Notifier\Notifier
+  notifier.channel_resolver.class: Notifier\NotifierBundle\Notifier\ChannelResolver
+  notifier.rule_set.class: Notifier\NotifierBundle\Notifier\RuleSet
 
 services:
   notifier:
     class: "%notifier.class%"
     arguments:
-      - "@notifier.recipient_bll"
-      - "@notifier.type_bll"
+      - "@notifier.channel_resolver"
 
-  notifier.type_bll:
-    class: "%notifier.type_bll.class%"
-    arguments:
-      - "@service_container"
+  notifier.channel_resolver:
+    class: "%notifier.channel_resolver.class%"

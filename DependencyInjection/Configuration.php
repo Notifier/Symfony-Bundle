@@ -22,6 +22,9 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('recipient_channel_resolver')
+                    ->isRequired()
+                ->end()
                 ->arrayNode('types')
                     ->useAttributeAsKey('name')
                     ->prototype('array')

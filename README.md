@@ -46,7 +46,8 @@ Usage
 
 **Implement the data provider**
 
-Implement `\Notifier\Recipient\RecipientBLL` and register it as a service named `notifier.recipient_bll`.
+Implement `\Notifier\NotifierBundle\Notifier\RecipientChannelResolverInterface` and register it as a service.
+Than register that service identifier as the `recipient_channel_resolver`.
 
 **Configure the types**
 
@@ -54,9 +55,10 @@ Implement `\Notifier\Recipient\RecipientBLL` and register it as a service named 
 
 ```
 notifier:
-    types:
-        alert:
-            channels: [ "acme.mail_channel" ]
+   recipient_channel_resolver: "acme.recipient_channel_resolver"
+   types:
+       alert:
+           channels: [ "acme.mail_channel" ]
 ```
 
 Make sure the channels all resolve to an existing service defined in the project.
