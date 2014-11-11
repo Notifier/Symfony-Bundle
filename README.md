@@ -1,6 +1,13 @@
 Symfony-Bundle
 ==============
 
+[![Build Status](https://secure.travis-ci.org/Notifier/Symfony-Bundle.png)](https://travis-ci.org/Notifier/Symfony-Bundle)
+[![Latest Stable Version](https://poser.pugx.org/notifier/notifier-bundle/version.svg)](https://packagist.org/packages/notifier/notifier-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/notifier/notifier-bundle/v/unstable.svg)](//packagist.org/packages/notifier/notifier-bundle)
+[![Total Downloads](https://poser.pugx.org/notifier/notifier-bundle/downloads.svg)](https://packagist.org/packages/notifier/notifier-bundle)
+[![Dependency Status](https://www.versioneye.com/user/projects/54617130a23e41f3be00003b/badge.svg)](https://www.versioneye.com/user/projects/54617130a23e41f3be00003b)
+[![License](https://poser.pugx.org/notifier/notifier-bundle/license.svg)](https://packagist.org/packages/notifier/notifier-bundle)
+
 Notifier integration for symfony projects.
 
 Installation
