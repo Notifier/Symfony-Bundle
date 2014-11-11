@@ -10,7 +10,6 @@
 namespace Notifier\NotifierBundle\Notifier;
 
 use Notifier\Channel\ChannelInterface;
-use Notifier\NotifierBundle\Type\Type;
 use Notifier\Recipient\RecipientInterface;
 use Notifier\Type\TypeInterface;
 
