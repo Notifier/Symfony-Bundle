@@ -1,7 +1,6 @@
 parameters:
   notifier.class: Notifier\Notifier
   notifier.channel_resolver.class: Notifier\NotifierBundle\Notifier\ChannelResolver
-  notifier.rule_set.class: Notifier\NotifierBundle\Notifier\RuleSet
 
 services:
   notifier:
